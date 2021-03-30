@@ -1,0 +1,17 @@
+{{#if erros}}
+    <div class="alert alert-danger">{{erros}}</div>
+{{else}}
+
+{{/if}}
+<div class="card">
+    <div class="card-body">
+        <form action="/user/login" method="POST">
+            <label for="username">Usuario: </label>
+                <input type="text" name="username" class="form-control" required>
+            <label for="password">Senha: </label>
+                <input type="password" name="password" class="form-control" required>
+            <button class="btn btn-success" type="submit">Entrar</button>
+        </form>
+        <small>Ainda não possui uma conta? <a href="/user/register">crie sua conta</a></small>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<h1>Administração de usuários</h1>
+{{#each user}}
+<div class="card mt-4">
+    <div class="card-body">
+        <h3>{{name}}</h3>
+        <h5>{{department}}</h5>
+        <h5>{{status}}</h5>
+        <a href="/user/edit/{{_id}}"><button class="btn btn-success" type="submit">Editar</button></a>
+        <form action="#" method="POST">
+            <input type="hidden" name="id" value="{{_id}}">
+            <button type="submit" class="btn btn-danger">Deletar</button>
+        </form>
+    </div>
+</div>
