@@ -26,7 +26,6 @@ const app = express()
         app.use(passport.session())
 
     //Midleware
-        
         app.use((req, res, next) => {
             res.locals.success_msg = req.flash("success_msg")
             res.locals.error_msg = req.flash("error_msg")
@@ -50,11 +49,11 @@ const app = express()
         app.use(express.static(path.resolve(__dirname, "public")))
 
     //mongoose
-        const connectDB = require('./database/connection')
-        connectDB()
+        // const connectDB = require('./database/connection')
+        // connectDB()
 
 //rotas
-app.use('/', require('./routes/main'))
+app.use('/', require('./routes/admin'))
 app.use('/user', require('./routes/user'))
 app.use('/ticket', require('./routes/ticket'))
 

@@ -24,7 +24,11 @@ var colab = new mongoose.Schema({
         type: mongoose.SchemaTypes.ObjectId,
         ref: 'company',
         required: true
-    }
+    },
+    // status: {
+    //     type: Number,
+        
+    // }
 })
 
 const colaborator = mongoose.model('colaborator', colab)

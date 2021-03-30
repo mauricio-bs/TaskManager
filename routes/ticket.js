@@ -1,5 +1,14 @@
 //rotas relacionadas aos atendimentos
 const express = require('express')
-const ticket = express.Router()
+const atend = express.Router()
+//controller
+const ticket = require('../controller/ticketController')
+const attendance = require('../model/attendance')
+
+atend.get('/dashboard', (req, res) => {
+    res.render('attendance/dashboard')
+})
+
+attendance.get('/ticket/:_id', attendance)
 
 module.exports = ticket

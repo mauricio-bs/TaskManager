@@ -13,7 +13,7 @@ const user = express.Router()
 
 //logon
 user.get('/login', (req, res) => {
-    res.render('users/login')
+    res.render('login')
 })
 
 user.post('/login', login.login)
@@ -25,19 +25,19 @@ user.post('/login', login.login)
 
 //cadastro de usuario
 user.get('/register', (req, res) => {
-    res.render('user/register')
+    res.render('admin/register')
 })
 
 user.post('/register/:id8', UserCont.newUser)
 
 //editar usuario
-user.get('/user/User', (req, res) => {
-    res.render('users/User')    
+user.get('/Users', (req, res) => {
+    res.render('admin/Users')    
 })
 
 //deletar usuario
 user.get('/user/User/:id', (req, res) => {
-    res.render('users')
+    res.render('admin/users')
 })
 
 module.exports = user

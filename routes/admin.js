@@ -4,11 +4,13 @@ const main = express.Router()
 
 //Home Page
 main.get('/', (req, res) => {
-    res.redirect('login')
+    res.render('index')
 })
 
 // main.get('/sobre', (req, res) => {
 //     res.render('/sobre', 'about')
 // })
+
+
 
 module.exports = main

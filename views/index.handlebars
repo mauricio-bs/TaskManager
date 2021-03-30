@@ -1,0 +1,21 @@
+{{#if erros}}
+    <div class="alert alert-danger">{{erros}}</div>
+{{else}}
+
+{{/if}}
+<div class="card">
+    <div class="card-body mt-3">
+        <form action="/user/login" method="POST">
+            <div class="form-floating mb-3">
+                <input type="text" name="id8" class="form-control" placeholder="Insira seu 8ID" required>
+            <label for="id8">Insira seu 8ID</label>
+            </div>
+            <div class="form-floating">
+                    <input type="password" name="password" class="form-control" placeholder="Senha" required>
+                <label for="password">Senha</label>
+            </div>
+            <button class="btn btn-success mt-3" type="submit">Entrar</button>
+        </form>
+        <small class="align-self-sm-end">Ainda não possui uma conta? <a href="/user/register">crie sua conta</a></small>
+    </div>
+</div>

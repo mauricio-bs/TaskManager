@@ -9,6 +9,10 @@ var comp = new mongoose.Schema({
     occupation: {
         name: String,
         required: true
+    },
+    dp: {
+        type: mongoose.SchemaTypes,
+        ref: 'department'
     }
 })
 
