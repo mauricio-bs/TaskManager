@@ -9,6 +9,6 @@ atend.get('/dashboard', (req, res) => {
     res.render('attendance/dashboard')
 })
 
-attendance.get('/ticket/:_id', attendance)
+atend.get('/ticket/:_id', attendance)
 
-module.exports = ticket
+module.exports = atend

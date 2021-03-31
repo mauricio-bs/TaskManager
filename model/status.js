@@ -1,11 +1,7 @@
 const mongoose = require('mongoose')
 
 var uStat = new mongoose.Schema({
-    status: {
-        type: Number,
-        required: true
-    },
-    name: {
+     name: {
         type: String,
         required: true
     }

@@ -38,11 +38,11 @@ var user = new mongoose.Schema({
         type: Number,
         default: 0
     },
-    // status: {
-    //     type: mongoose.SchemaTypes.ObjectId,
-    //     ref: 'userStatus',
-    //     default: '0'
-    // }
+    status: {
+        type: mongoose.SchemaTypes.ObjectId,
+        ref: 'status',
+        default: '0'
+    }
 })
 
 const User = mongoose.model('User', user)

@@ -1,4 +1,6 @@
-<h1>Usuarios Cadastrados</h1>
+<div>
+    <h1>Usuarios Cadastrados</h1>
+</div>
 {{#each user}}
 <div class="card mt-4">
     <div class="card-body">
@@ -13,5 +15,9 @@
     </div>
 </div>
 {{else}}
-
+    <br>
+    <div>
+        <h4>Nenum usuario registrado</h4>
+        <a href="/user/register"><button class="btn btn-info">Novo Usuario</button></a>
+    </div>
 {{/each}}

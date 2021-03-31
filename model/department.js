@@ -10,11 +10,6 @@ var departmente = new mongoose.Schema({
     nickname: {
         type: String,
         required: true
-    },
-    build: {
-        type: mongoose.SchemaTypes.ObjectId,
-        ref: "build",
-        required: true
     }
 })
 

@@ -7,10 +7,6 @@ var colab = new mongoose.Schema({
         type: String,
         required: true
     },
-    birthday: {
-        type: Date,
-        required: true
-    },
     responsability: {
         type: String,
         required: true

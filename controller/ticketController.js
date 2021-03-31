@@ -1,6 +1,6 @@
 const flash = require('connect-flash')
 const session = require('express-session')
-
+//models
 const db = require('../model/attendance')
 
 exports.ticketDetails = ((req, res) => {

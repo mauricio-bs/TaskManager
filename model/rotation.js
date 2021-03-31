@@ -7,7 +7,7 @@ var rot = new mongoose.Schema({
         required: true
     },
     period: {
-        type: TimeRanges,
+        type: TimeRanges(),
         required: true
     }
 })

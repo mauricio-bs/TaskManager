@@ -6,6 +6,11 @@ var building = new Schema({
     name: {
         type: String,
         required: true
+    },
+    department: {
+        type: mongoose.SchemaTypes,
+        ref: 'department',
+        required: true
     }
 })
 

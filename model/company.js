@@ -10,7 +10,7 @@ var comp = new mongoose.Schema({
         name: String,
         required: true
     },
-    dp: {
+    department: {
         type: mongoose.SchemaTypes,
         ref: 'department'
     }

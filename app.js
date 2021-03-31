@@ -53,7 +53,8 @@ const app = express()
         // connectDB()
 
 //rotas
-app.use('/', require('./routes/admin'))
+app.use('/', require('./routes/main'))
+app.use('/admin', require('./routes/admin'))
 app.use('/user', require('./routes/user'))
 app.use('/ticket', require('./routes/ticket'))
 
