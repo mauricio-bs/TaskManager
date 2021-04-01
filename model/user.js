@@ -34,14 +34,15 @@ var user = new mongoose.Schema({
         ref: 'company',
         required: true
     },
+    //0 = Usuario(Padrão) | 1 = Administrador | 2 = Atendente
     role: {
         type: Number,
         default: 0
     },
+    //0 = desativado | 1 = ativo
     status: {
-        type: mongoose.SchemaTypes.ObjectId,
-        ref: 'status',
-        default: '0'
+        type: Number,
+        default: 1
     }
 })
 

@@ -5,18 +5,12 @@ const bcrypt = require('bcryptjs')
 const passport = require('passport')
 //Controlers
 const UserCont = require('../controller/userController')
-const login = require('../controller/loginController')
 const ticket = require('../controller/ticketController')
+//Auth
+const {isAdmin} = require('../helpers/Authen')
 //Config
 const user = express.Router()
 
-
-//logon
-user.get('/login', (req, res) => {
-    res.render('login')
-})
-
-user.post('/login', login.login)
 
 // //logoff
 // user.get('/user/logoff', (req, res) => {
@@ -36,7 +30,7 @@ user.get('/Users', (req, res) => {
 })
 
 //deletar usuario
-user.get('/user/User/:id', (req, res) => {
+user.get('/user/User/:id', isAdmin, (req, res) => {
     res.render('admin/users')
 })
 

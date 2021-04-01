@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 
-var uStat = new mongoose.Schema({
-     name: {
+var stat = new mongoose.Schema({
+    name: {
         type: String,
         required: true
     }
 })
 
-const userStatus = mongoose.model('userStatus', uStat)
-module.exports = userStatus
+const status = mongoose.model('status', stat)
+module.exports = status
