@@ -15,6 +15,10 @@ main.get('/login', (req, res) => {
 
 main.post('/login', login.login)
 
+
+//logoff
+main.get('/logout', login.logoff)
+
 // main.get('/sobre', (req, res) => {
 //     res.render('/sobre', 'about')
 // })

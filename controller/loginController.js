@@ -10,6 +10,8 @@ exports.login = (req, res, next) => {
     })(req, res, next)
 }
 
-// exports.logof = (req, res, next) => {
-
-// }
+exports.logoff = (req, res) => {
+    req.logout()
+    req.flash('success_msg', 'Deslogado com sucesso!')
+    res.redirect('/')
+}
