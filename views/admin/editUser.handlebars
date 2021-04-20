@@ -1,0 +1,68 @@
+{{#if erros}}
+    <div class="alert alert-danger">{{text}}</div>
+{{else}}
+
+{{/if}}
+<h2>Cadastro</h2>
+<div class="card">
+    <div class="card-body mt-3">
+        <form action="/user/register" method="POST">
+            <!-- ID do usuario, não fica a mostra, tipo hidden -->
+            <input type="hidden" name="id8" value="{{usuario._id}}">
+            <!-- Nome -->
+            <label for="name">Nome: </label>
+                <input type="text" name="name" class="form-control" value="{{ususario.name}}" required>
+            <br>
+            <!-- Email -->
+            <label for="email">Email: </label>
+                <input type="email" name="email" class="form-control" value="{{usuario.email}}" required>
+            <br>
+            <div class="row">
+                <!-- Cargo -->
+                <div class="col">
+                    <label for="response">Cargo: </label>
+                        <input type="text" name="response" class="form-control" value="usuario.responsability" required>
+                </div>
+                <!-- 8ID -->
+                <div class="col">
+                    <label for="id8">8ID: </label>
+                        <input type="text" name="id8" class="form-control"  value="{{usuario.id8}}" disabled>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <!-- Seleção de Empresa -->
+                    <label for="company" class="form-label">Empresa: </label>
+                    <select name="company" class="form-select">
+                        {{#each company}}
+                            <option value="{{_id}}">{{name}}</option>
+                        {{else}}
+                            <option value="0">Nenhuma empresa registrada</option>
+                        {{/each}}
+                    </select>
+                    <!-- /Seleção de Empresa -->
+                </div>
+                <div class="col">
+                    <!-- Seleção de departamento -->
+                    <label for="dp" class="form-label">Departamento: </label>
+                    {{#if body.company}}
+                    <select name="department" class="form-select">
+                        {{#each department}}
+                            <option value="{{_id}}" aria-required="true">{{nickname}}</option>
+                        {{else}}
+                            <option value="0">Nenhum departamento registrado</option>
+                        {{/each}}
+                    </select>
+                    {{else}}
+                        <select name="department" class="form-select disabled">
+                            <option value="Selecione uma empresa" aria-required="true"></option>
+                        </select>
+                    {{/if}}
+                    <!-- /Seleção de departamento -->
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success mt-3">Alterar</button>
+        </form>
+    </div>
+</div>

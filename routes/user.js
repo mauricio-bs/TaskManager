@@ -11,12 +11,6 @@ const {isAdmin} = require('../helpers/Authen')
 //Config
 const user = express.Router()
 
-
-// //logoff
-// user.get('/user/logoff', (req, res) => {
-//     res.render('users/logoff')
-// })
-
 //cadastro de usuario
 user.get('/register', (req, res) => {
     res.render('admin/register')
@@ -25,9 +19,9 @@ user.get('/register', (req, res) => {
 user.post('/register/:id8', UserCont.newUser)
 
 //editar usuario
-user.get('/Users', (req, res) => {
-    res.render('admin/Users')    
-})
+// user.get('/Users/edit/:id8', (req, res) => {
+    
+// })
 
 //deletar usuario
 user.get('/user/User/:id', isAdmin, (req, res) => {

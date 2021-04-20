@@ -10,6 +10,7 @@ exports.login = (req, res, next) => {
     })(req, res, next)
 }
 
+//logoff
 exports.logoff = (req, res) => {
     req.logout()
     req.flash('success_msg', 'Deslogado com sucesso!')

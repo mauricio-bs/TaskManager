@@ -6,14 +6,18 @@ const session = require('express-session')
 
 //Cadastro de usuario
 exports.newUser = (req, res) => {
-    
+    //Verificações
     var erros = []
-
+    //Verifica se o campo nome possui conteudo
     if(!req.body.name || req.body.name == null || req.body.name == undefined){
         erros.push({texto: 'Nome inválido'})
     }
+    //Verifica se o campo 8ID possui conteudo
     if(!req.body.id8 || req.body.id8 == null || req.body.id8 == undefined){
         erros.push({texto: '8ID inválido'})
+    }
+    if(req.body.id8 != Number){
+        erros.push({texto: 'O campo 8ID deve conter apenas números'})
     }
     if(!req.body.department || req.body.department == null || req.body.department == undefined){
         erros.push({texto: 'Insira um departamento'})
@@ -62,3 +66,8 @@ exports.newUser = (req, res) => {
     }
 }
 
+// exports.editUser = (req, res) => {
+//     Userdb.findOne({_id: req.params.id8}).then((user) => {
+        
+//     })
+// }
