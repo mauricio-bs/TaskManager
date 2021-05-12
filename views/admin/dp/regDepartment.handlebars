@@ -1,0 +1,26 @@
+{{#if erros}}
+<div class="alert alert-danger">{{text}}</div>
+{{else}}
+
+{{/if}}
+<h2>Cadastro de departamento</h2>
+<div class="card">
+    <div class="card-body mt-3">
+        <form action="/admin/departments/new-department" method="POST">
+            <label for="name">Nome: </label>
+            <input type="text" name="name" class="form-control" required>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <label for="response">Apelido: </label>
+                    <input type="text" name="response" class="form-control" placeholder="exemplo: UV, UC, FM..."
+                        required>
+                </div>
+            </div>
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-success mt-3 ">Cadastrar</button>
+                <a href="/admin/departments"><button type="button" class="btn btn-danger mt-3">Cancelar</button></a>
+            </div>
+        </form>
+    </div>
+</div>
