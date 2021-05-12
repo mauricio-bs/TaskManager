@@ -1,25 +1,25 @@
-const express = require("express");
-const login = require("../controller/loginController");
+const express = require('express')
+const login = require('../controller/loginController')
 
-const main = express.Router();
+const main = express.Router()
 
 //Home Page
-main.get("/", (req, res) => {
-  res.render("index");
-});
+main.get('/', (req, res) => {
+	res.render('index')
+})
 
 //logon
-main.get("/login", (req, res) => {
-  res.render("index");
-});
+main.get('/login', (req, res) => {
+	res.render('index')
+})
 
-main.post("/login", login.login);
+main.post('/login', login.login)
 
 //logoff
-main.get("/logout", login.logoff);
+main.get('/logout', login.logoff)
 
 // main.get('/sobre', (req, res) => {
 //     res.render('/sobre', 'about')
 // })
 
-module.exports = main;
+module.exports = main
