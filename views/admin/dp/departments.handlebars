@@ -6,7 +6,7 @@
     <div class="card-body">
         <h3>{{name}}</h3>
         <h5>{{nickname}}</h5>
-        <a href="/admin/departments/edit-dp/{{_id}}"><button class="btn btn-success" type="submit">Editar</button></a>
+        <a href="admin/departments/edit-dp/{{_id}}"><button class="btn btn-success" type="submit">Editar</button></a>
         <form action="#" method="POST">
             <input type="hidden" name="id" value="{{_id}}">
             <button type="submit" class="btn btn-danger">Deletar</button>
@@ -17,6 +17,6 @@
 <br>
 <div>
     <h4>Nenhum departamento cadastrado</h4>
-    <a href="/admin/departments/new-department"><button class="btn btn-primary">Novo departamento</button></a>
+    <a href="admin/departments/new-department"><button class="btn btn-warning">Novo departamento</button></a>
 </div>
 {{/each}}
