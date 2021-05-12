@@ -1,18 +1,17 @@
 //Controller com ações de login login do usuario
-const passport = require('passport')
+const passport = require("passport");
 
 //login
 exports.login = (req, res, next) => {
-    passport.authenticate('local', {
-        successRedirect: '/',
-        failureRedirect: '/users/login',
-        failureFlash: true
-    })(req, res, next)
-}
+  passport.authenticate("local", {
+    successRedirect: "/",
+    failureRedirect: "/users/login",
+    failureFlash: true,
+  })(req, res, next);
+};
 
 //logoff
 exports.logoff = (req, res) => {
-    req.logout()
-    req.flash('success_msg', 'Deslogado com sucesso!')
-    res.redirect('/')
-}
+  req.logout();
+  res.redirect("/");
+};

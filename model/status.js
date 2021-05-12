@@ -1,11 +1,11 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 var stat = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    }
-})
+  name: {
+    type: String,
+    required: true,
+  },
+});
 
-const status = mongoose.model('status', stat)
-module.exports = status
+const status = mongoose.model("status", stat);
+module.exports = status;
