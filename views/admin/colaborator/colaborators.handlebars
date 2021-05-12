@@ -5,9 +5,11 @@
 <div class="card mt-4">
     <div class="card-body">
         <h3>{{name}}</h3>
+        <h5>{{id8}}</h5>
         <h5>{{department}}</h5>
         <h5>{{status}}</h5>
-        <a href="/admin/colaborators/editColab/{{_id}}"><button class="btn btn-success" type="submit">Editar</button></a>
+        <a href="/admin/colaborators/editColab/{{_id}}"><button class="btn btn-success"
+                type="submit">Editar</button></a>
         <form action="#" method="POST">
             <input type="hidden" name="id" value="{{_id}}">
             <button type="submit" class="btn btn-danger">Deletar</button>
@@ -15,9 +17,9 @@
     </div>
 </div>
 {{else}}
-    <br>
-    <div>
-        <h4>Nenhum colaborador cadastrdo</h4>
-        <a href="/admin/colaborators/register"><button class="btn btn-info">Novo Colaborador</button></a>
-    </div>
+<br>
+<div>
+    <h4>Nenhum colaborador cadastrdo</h4>
+    <a href="/admin/colaborators/register"><button class="btn btn-info">Novo Colaborador</button></a>
+</div>
 {{/each}}
